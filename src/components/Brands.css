@@ -1,0 +1,37 @@
+.brands-section {
+    padding: 60px 0;
+    background-color: var(--secondary-black);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brands-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.brand-item img {
+    max-width: 200px;
+    max-height: 80px;
+    filter: grayscale(1) brightness(2);
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.brand-item:hover img {
+    filter: grayscale(0) brightness(1);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .brands-grid {
+        gap: 30px;
+    }
+
+    .brand-item img {
+        max-width: 150px;
+    }
+}

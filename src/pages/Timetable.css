@@ -1,0 +1,148 @@
+.timetable-page {
+    background-color: #0b0b0b;
+    color: #fff;
+    padding-bottom: 150px;
+}
+
+.timetable-content {
+    margin-top: 100px;
+}
+
+.timetable-heading {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+
+.timetable-filters {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.filter-btn.active {
+    color: #fff;
+}
+
+.filter-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--stark-white);
+}
+
+.filter-btn:hover {
+    color: #fff;
+}
+
+.timetable-grid-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.timetable-grid {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.timetable-grid th,
+.timetable-grid td {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.timetable-grid th {
+    height: 60px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-gray);
+    font-weight: 400;
+}
+
+.time-slot-label {
+    width: 150px;
+    padding: 20px !important;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-gray);
+    text-align: center;
+}
+
+.timetable-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.item-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.item-instructor {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Category Specific Styles (Optional, as seen in screenshot colors are mostly consistent but we can add accents) */
+/*.timetable-item.cardio { border-top: 2px solid #ff2d55; }*/
+/*.timetable-item.crossfit { border-top: 2px solid var(--accent-lime); }*/
+
+@media (max-width: 1200px) {
+    .timetable-grid {
+        width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timetable-heading {
+        font-size: 2.5rem;
+    }
+
+    .timetable-filters {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

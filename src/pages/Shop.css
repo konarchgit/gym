@@ -1,0 +1,74 @@
+.shop-page {
+    background-color: #fff;
+    padding-bottom: 100px;
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+    padding: 80px 0;
+}
+
+.shop-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.results-count {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--text-gray);
+    text-transform: uppercase;
+}
+
+.sorting select {
+    padding: 10px 20px;
+    border: 1px solid #eee;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+}
+
+.pagination span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pagination span.current,
+.pagination span:hover {
+    background-color: var(--primary-black);
+    color: var(--stark-white);
+    border-color: var(--primary-black);
+}
+
+@media (max-width: 992px) {
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-sidebar {
+        order: 2;
+    }
+}
