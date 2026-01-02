@@ -16,6 +16,7 @@ import Checkout from './pages/Checkout';
 import Blog from './pages/Blog';
 import Timetable from './pages/Timetable';
 import EventSingle from './pages/EventSingle';
+import ScrollToTop from './components/ScrollToTop';
 import { CartProvider } from './context/CartContext';
 
 const Home = () => (
@@ -46,6 +47,7 @@ function App() {
             <Route path="/events-single" element={<EventSingle />} />
           </Routes>
           <Footer />
+          <ScrollToTop />
         </div>
       </CartProvider>
     </Router>
